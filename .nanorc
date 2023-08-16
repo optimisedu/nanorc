@@ -1,0 +1,204 @@
+################################## Basic NanoRC by Optimise-U ################################################
+## Usful Links:
+## Lots of setops
+## https://opensource.apple.com/source/nano/nano-3/nano/nanorc.sample.auto.html
+
+##### Changelog: 16/08/2023
+## 1. Added pretty exhustive list of config files
+## 2. Added Navigation opts, basic colorscheme tweaks
+## 3. Added linenumbers and scrollbar("indictor")
+## 4. Added Mouse left click support
+## 5. Added Multibuffer - navigate with ctrl+, ctrl-
+
+#### Todo:
+## 1. Polish
+## 2. Keep testing on other devices (shouldn't be any issues)
+## 3. Autopair Functionality
+## 4. Rebind
+## 5. Make a more termux (android shell) friendly version 
+
+
+
+include "~/.nano/apacheconf.nanorc"
+include "~/.nano/arduino.nanorc"
+include "~/.nano/asciidoc.nanorc"
+include "~/.nano/asm.nanorc"
+include "~/.nano/awk.nanorc"
+include "~/.nano/c.nanorc"
+include "~/.nano/clojure.nanorc"
+include "~/.nano/cmake.nanorc"
+include "~/.nano/coffeescript.nanorc"
+include "~/.nano/colortest.nanorc"
+include "~/.nano/conf.nanorc"
+include "~/.nano/csharp.nanorc"
+include "~/.nano/css.nanorc"
+include "~/.nano/cython.nanorc"
+include "~/.nano/dot.nanorc"
+include "~/.nano/dotenv.nanorc"
+include "~/.nano/email.nanorc"
+include "~/.nano/Dockerfile.nanorc"
+include "~/.nano/etc-hosts.nanorc"
+include "~/.nano/fish.nanorc"
+include "~/.nano/fortran.nanorc"
+include "~/.nano/gentoo.nanorc"
+include "~/.nano/git.nanorc"
+include "~/.nano/gitcommit.nanorc"
+include "~/.nano/glsl.nanorc"
+include "~/.nano/go.nanorc"
+include "~/.nano/gradle.nanorc"
+include "~/.nano/groff.nanorc"
+include "~/.nano/haml.nanorc"
+include "~/.nano/haskell.nanorc"
+include "~/.nano/html.nanorc"
+include "~/.nano/html.j2.nanorc"
+include "~/.nano/ical.nanorc"
+include "~/.nano/ini.nanorc"
+include "~/.nano/inputrc.nanorc"
+include "~/.nano/jade.nanorc"
+include "~/.nano/java.nanorc"
+include "~/.nano/javascript.nanorc"
+include "~/.nano/js.nanorc"
+include "~/.nano/json.nanorc"
+include "~/.nano/keymap.nanorc"
+include "~/.nano/kickstart.nanorc"
+include "~/.nano/kotlin.nanorc"
+include "~/.nano/ledger.nanorc"
+include "~/.nano/lisp.nanorc"
+include "~/.nano/lua.nanorc"
+include "~/.nano/makefile.nanorc"
+include "~/.nano/man.nanorc"
+include "~/.nano/markdown.nanorc"
+include "~/.nano/mpdconf.nanorc"
+include "~/.nano/mutt.nanorc"
+include "~/.nano/nanorc.nanorc"
+include "~/.nano/nginx.nanorc"
+include "~/.nano/nmap.nanorc"
+include "~/.nano/ocaml.nanorc"
+include "~/.nano/patch.nanorc"
+include "~/.nano/peg.nanorc"
+include "~/.nano/perl.nanorc"
+include "~/.nano/perl6.nanorc"
+include "~/.nano/php.nanorc"
+include "~/.nano/pkg-config.nanorc"
+include "~/.nano/pkgbuild.nanorc"
+include "~/.nano/po.nanorc"
+include "~/.nano/pov.nanorc"
+include "~/.nano/privoxy.nanorc"
+include "~/.nano/puppet.nanorc"
+include "~/.nano/pug.nanorc"
+include "~/.nano/python.nanorc"
+include "~/.nano/reST.nanorc"
+include "~/.nano/rpmspec.nanorc"
+include "~/.nano/ruby.nanorc"
+include "~/.nano/rust.nanorc"
+include "~/.nano/scala.nanorc"
+include "~/.nano/sed.nanorc"
+include "~/.nano/sh.nanorc"
+include "~/.nano/sls.nanorc"
+include "~/.nano/sql.nanorc"
+include "~/.nano/svn.nanorc"
+include "~/.nano/swift.nanorc"
+include "~/.nano/systemd.nanorc"
+include "~/.nano/tcl.nanorc"
+include "~/.nano/tex.nanorc"
+include "~/.nano/vala.nanorc"
+include "~/.nano/verilog.nanorc"
+include "~/.nano/vi.nanorc"
+include "~/.nano/xml.nanorc"
+include "~/.nano/xresources.nanorc"
+include "~/.nano/yaml.nanorc"
+include "~/.nano/yum.nanorc"
+include "~/.nano/zsh.nanorc"
+
+
+## Readability & Navigation
+set afterends
+set atblanks
+set autoindent
+set breaklonglines
+set positionlog
+
+## Basic Colorizing [indicator -> scrollbar]
+set indicator
+set linenumbers
+set numbercolor orange
+set titlecolor red,yellow
+set scrollercolor orange,yellow
+
+## TABS
+set tabsize 4
+set tabstospaces
+set matchbrackets "(<[{)>]}"
+set multibuffer
+
+## MISC [Zap full word delete]
+set constantshow 
+set mouse
+set softwrap
+set softwrap
+set zap
+
+#####  Modern Nano Keybindings  #####
+## M-U   undo
+## M-R   redo
+## ^-C   copy
+## ^-X   cut
+## ^-V   paste
+## ^-K   delete line
+## ^-bsp delete until word start (or M-bsp)
+## ^-del delete until next word
+## ^-L   refresh and center cursor
+## ^-S   save file
+## M-/   comment/uncomment
+## M-V   insert keystroke verbatim
+## M-:   record macro
+## M-;   play macro
+## ^-Space  autocomplete word
+
+## M-C   cursor position
+## ^-W   search forward (= M-W + prompt)
+## ^-E   seach backwards (= M-E + prompt)
+## ^-R   replace
+## ^-up  goto previous block
+## ^-dn  goto next block
+## M-(   goto block begin
+## M-)   goto block end
+## ^_    goto line/coloumn number
+## ^-G   head of file (vim-like)
+## M-G   end of file
+## M-up  screen up one line
+## M-dn  screen down one line
+## M-]   goto matching bracket
+## M-ins   insert anchor
+## M-pgup  goto previous anchor
+## ^-T     terminal (eg. |xxd)
+
+bind M-R  redo          main
+bind ^C   copy          main
+bind ^X   cut           main
+bind ^V   paste         main
+bind ^K   zap           main
+bind ^H   chopwordleft  all
+bind ^Q   exit          all
+bind ^Z   suspend       main
+bind M-/  comment       main
+bind ^Space complete    main
+
+bind M-C  location      main
+bind ^E   wherewas      all
+bind M-E  findprevious  all
+bind ^R   replace       main
+bind ^B   pageup        all  # vim-like support
+bind ^F   pagedown      all
+bind ^G   firstline     all
+bind M-G  lastline      all
+#bind M-F  nextword      all  # to bind to `M-left` on macOS
+#bind M-B  prevword      all
+#bind M-2  anchor        main  # to use anchors on macOS
+#bind F2   nextanchor    main
+#bind F3   prevanchor    main
+
+bind M-1    help        all    # fix ^G been used
+bind Sh-M-C constantshow main  # fix M-C, M-F and M-b been used
+bind Sh-M-F formatter   main
+bind Sh-M-B linter      main
